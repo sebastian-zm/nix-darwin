@@ -2,7 +2,7 @@
 
   environment.variables = {
     EDITOR = "nvim";
-  }
+  };
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -20,9 +20,8 @@
     hexedit
     apktool
     nmap
+    ghidra-bin
     jadx
-    ghidra
-    ghidra-extensions.wasm
     (
       let
         mkNvimPlugin = { name, src }: {
