@@ -1,4 +1,8 @@
 { pkgs, self, nvim-plugins, us-altgr-intl, ... }: {
+
+  environment.variables = {
+    EDITOR = "nvim";
+  }
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -56,7 +60,8 @@
             require("netrw").setup({})
           '';
           customRC = ''
-    	set mouse=nvi
+    	    set mouse=nvi
+    	    set expandtab
             let g:netrw_liststyle = 3
             let g:netrw_winsize = 30
           '';
