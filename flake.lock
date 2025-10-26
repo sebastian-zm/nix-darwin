@@ -1,0 +1,117 @@
+{
+  "nodes": {
+    "auto-dark-mode-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754250335,
+        "narHash": "sha256-PhhOlq4byctWJ5rLe3cifImH56vR2+k3BZGDZdQvjng=",
+        "owner": "f-person",
+        "repo": "auto-dark-mode.nvim",
+        "rev": "e300259ec777a40b4b9e3c8e6ade203e78d15881",
+        "type": "github"
+      },
+      "original": {
+        "owner": "f-person",
+        "repo": "auto-dark-mode.nvim",
+        "type": "github"
+      }
+    },
+    "guess-indent-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1742937349,
+        "narHash": "sha256-M/FkwCXXhojVFEcCuHo/GkuCCSX9GlVYHBUECSZxBjs=",
+        "owner": "NMAC427",
+        "repo": "guess-indent.nvim",
+        "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NMAC427",
+        "repo": "guess-indent.nvim",
+        "type": "github"
+      }
+    },
+    "mini-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761314541,
+        "narHash": "sha256-3piMqAUkT6rf0cMhJIBYeW5dWJVDXKBvKz0pauMN8/o=",
+        "owner": "echasnovski",
+        "repo": "mini.nvim",
+        "rev": "d1a91582bf2d16026ae84292874c70fb2d0ffe42",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "repo": "mini.nvim",
+        "type": "github"
+      }
+    },
+    "netrw-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721754696,
+        "narHash": "sha256-tEO+omzlaC0uFkIHebeqnGtiPbDelRTBJONEnTy0F9U=",
+        "owner": "prichrd",
+        "repo": "netrw.nvim",
+        "rev": "90501c62b9b816ed3ed1e912ae9db9af5671a1b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "prichrd",
+        "repo": "netrw.nvim",
+        "type": "github"
+      }
+    },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1761339987,
+        "narHash": "sha256-IUaawVwItZKi64IA6kF6wQCLCzpXbk2R46dHn8sHkig=",
+        "owner": "nix-darwin",
+        "repo": "nix-darwin",
+        "rev": "7cd9aac79ee2924a85c211d21fafd394b06a38de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-darwin",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1761349956,
+        "narHash": "sha256-tH3wHnOJms+U4k/rK2Nn1RfBrhffX92jLP/2VndSn0w=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "02f2cb8e0feb4596d20cc52fda73ccee960e3538",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "auto-dark-mode-nvim": "auto-dark-mode-nvim",
+        "guess-indent-nvim": "guess-indent-nvim",
+        "mini-nvim": "mini-nvim",
+        "netrw-nvim": "netrw-nvim",
+        "nix-darwin": "nix-darwin",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
