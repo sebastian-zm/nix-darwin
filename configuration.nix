@@ -13,6 +13,11 @@
     uv
     nodejs_24
     mysql84
+    jupyter
+    python313Packages.numpy
+    python313Packages.pandas
+    python313Packages.openpyxl
+    node-red
     maven
     zulu21
     pandoc
@@ -21,7 +26,7 @@
     apktool
     nmap
     ghidra-bin
-    jadx
+    # jadx
     (
       let
         mkNvimPlugin = { name, src }: {
@@ -34,7 +39,7 @@
         plugins = with nvim-plugins; map mkNvimPlugin [
           { name = "mini.nvim"; src = "${mini-nvim}"; }
           { name = "guess-indent.nvim"; src = "${guess-indent-nvim}"; }
-          # { name = "auto-dark-mode.nvim"; src = "${auto-dark-mode-nvim}"; }
+          { name = "auto-dark-mode.nvim"; src = "${auto-dark-mode-nvim}"; }
           { name = "netrw.nvim"; src = "${netrw-nvim}"; }
         ];
       in pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (
