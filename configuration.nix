@@ -11,6 +11,8 @@
     codex
     jq
     uv
+    nodejs_24
+    pandoc
     imagemagick
     hexedit
     apktool
