@@ -11,6 +11,7 @@
     hexedit
     apktool
     nmap
+    jadx
     ghidra
     ghidra-extensions.wasm
     (
