@@ -12,6 +12,9 @@
     jq
     uv
     nodejs_24
+    mysql84
+    maven
+    zulu21
     pandoc
     imagemagick
     hexedit
