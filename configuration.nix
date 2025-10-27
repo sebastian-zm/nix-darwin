@@ -18,6 +18,7 @@
     python313Packages.pandas
     python313Packages.openpyxl
     node-red
+    vscode
     maven
     zulu21
     pandoc
@@ -80,6 +81,10 @@
   ];
 
   security.pam.services.sudo_local.touchIdAuth = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
