@@ -18,7 +18,6 @@
     python313Packages.pandas
     python313Packages.openpyxl
     node-red
-    vscode
     maven
     zulu21
     pandoc
@@ -28,6 +27,17 @@
     nmap
     ghidra-bin
     # jadx
+    (
+      pkgs.vscode-with-extensions.override {
+        vscode = pkgs.vscode;
+
+        vscodeExtensions = with pkgs.vscode-extensions; [
+          redhat.java
+          ms-python.python
+          ms-toolsai.jupyter
+        ];
+      }
+    )
     (
       let
         mkNvimPlugin = { name, src }: {
