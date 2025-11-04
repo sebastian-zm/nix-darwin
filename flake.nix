@@ -7,7 +7,6 @@
 
     mini-nvim = { url = "github:echasnovski/mini.nvim"; flake = false; };
     guess-indent-nvim = { url = "github:NMAC427/guess-indent.nvim"; flake = false; };
-    auto-dark-mode-nvim = { url = "github:f-person/auto-dark-mode.nvim"; flake = false; };
     netrw-nvim = { url = "github:prichrd/netrw.nvim"; flake = false; };
   };
 

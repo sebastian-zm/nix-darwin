@@ -1,17 +1,36 @@
 { pkgs, self, nvim-plugins, us-altgr-intl, ... }: {
 
+  imports = [ ./modules/mysql.nix ];
+
   environment.variables = {
     EDITOR = "nvim";
   };
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
+  homebrew = {
+    enable = true;
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "zap";
+      upgrade = true;
+    };
+    caskArgs = {
+      appdir = "/Applications";
+    };
+    casks = [ "obs" "protonvpn" ];
+  };
   environment.systemPackages = with pkgs; [
     podman
     docker-compose
     codex
+    gemini-cli
     jq
+    bat
+    btop
+    dust
     uv
     nodejs_24
+    pandoc
+
+    # uni
     mysql84
     jupyter
     python313Packages.numpy
@@ -20,13 +39,17 @@
     node-red
     maven
     zulu21
-    pandoc
+
+    # hack
     imagemagick
     hexedit
     apktool
     nmap
     ghidra-bin
-    # jadx
+    volatility3
+    jadx
+
+    # editors
     (
       pkgs.vscode-with-extensions.override {
         vscode = pkgs.vscode;
@@ -50,7 +73,6 @@
         plugins = with nvim-plugins; map mkNvimPlugin [
           { name = "mini.nvim"; src = "${mini-nvim}"; }
           { name = "guess-indent.nvim"; src = "${guess-indent-nvim}"; }
-          { name = "auto-dark-mode.nvim"; src = "${auto-dark-mode-nvim}"; }
           { name = "netrw.nvim"; src = "${netrw-nvim}"; }
         ];
       in pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (
@@ -76,7 +98,6 @@
             require("mini.statusline").setup()
             require("mini.tabline").setup()
             require("mini.trailspace").setup()
-            -- require("auto-dark-mode").setup({})
             require("netrw").setup({})
           '';
           customRC = ''
@@ -95,6 +116,8 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
+
+  system.primaryUser = "sebastian";
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
